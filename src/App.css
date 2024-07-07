@@ -1,0 +1,88 @@
+ body{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+ }
+ .navbar {
+  border-bottom: .2rem solid yellow;
+  width: 100%;
+  height: auto;
+  top: 0;
+  position: sticky;
+  z-index: 100000;
+  background-color:black; /* Ensure background is set */
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 4px solid yellow;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#menu-btn{
+  display: none;
+}
+/* .search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.search-form.active {
+  transform: scaleY(1);
+}
+
+.search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: black;
+  padding: 1rem;
+  text-transform: none;
+  border: none;
+  outline: none;
+}
+
+.search-form label {
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: black;
+}
+
+.search-form label:hover {
+  color: yellow;
+} */
+.home {
+  background-image: url(./assets/images/bgc.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 83vh;
+}
